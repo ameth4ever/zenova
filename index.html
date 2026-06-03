@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Jolof Nexus est une agence technologique moderne spécialisée dans le développement web, les applications web, le design UI/UX, le SEO et les solutions de transformation numérique."
+    />
+    <title>Jolof Nexus | Site en construction</title>
+    <!-- Google Fonts: Poppins & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="nav-bar fade-in-down">
+      <div class="container nav-content">
+        <div class="logo">
+          <span class="logo-icon">▲</span> Jolof<span class="logo-accent"
+            >Nexus</span
+          >
+        </div>
+        <a href="#contact" class="btn btn-primary btn-small">Nous contacter</a>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="container hero-container">
+        <div class="hero-text fade-in-up">
+          <div class="status-badge">
+            <span class="status-dot"></span> Bientôt disponible
+          </div>
+          <h1 class="hero-title">
+            Lancement <br />
+            <span class="text-gradient">Imminent.</span>
+          </h1>
+          <p class="hero-subtitle">
+            Nous construisons <strong>Jolof Nexus</strong>, une plateforme
+            numérique conçue pour transformer la croissance en ligne de votre
+            entreprise. Là où l'innovation rencontre la visibilité.
+          </p>
+          <div class="cta-group">
+            <a href="#about" class="btn btn-secondary">En savoir plus</a>
+          </div>
+        </div>
+
+        <!-- SVG Rocket Illustration -->
+        <div class="hero-illustration fade-in-up" style="animation-delay: 0.2s">
+          <div class="rocket-scene">
+            <!-- Clouds -->
+            <div class="cloud cloud-1"></div>
+            <div class="cloud cloud-2"></div>
+            <div class="cloud cloud-3"></div>
+            <div class="cloud cloud-4"></div>
+
+            <!-- Stars / Particles -->
+            <div class="particle p-1"></div>
+            <div class="particle p-2"></div>
+            <div class="particle p-3"></div>
+            <div class="particle p-4"></div>
+            <div class="particle p-5"></div>
+
+            <!-- The Rocket -->
+            <svg
+              class="rocket-svg"
+              viewBox="0 0 200 400"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <!-- Flames -->
+              <g class="exhaust-flame">
+                <path d="M85 280 L100 360 L115 280 Z" fill="#F59E0B" />
+                <path
+                  class="flame-inner"
+                  d="M92 280 L100 330 L108 280 Z"
+                  fill="#FCD34D"
+                />
+              </g>
+              <!-- Left Fin -->
+              <path
+                class="rocket-fin"
+                d="M80 220 L40 280 L80 280 Z"
+                fill="#2563EB"
+              />
+              <!-- Right Fin -->
+              <path
+                class="rocket-fin"
+                d="M120 220 L160 280 L120 280 Z"
+                fill="#2563EB"
+              />
+
+              <!-- Rocket Body -->
+              <path
+                class="rocket-body"
+                d="M100 60 C60 140 80 280 80 280 L120 280 C120 280 140 140 100 60 Z"
+                fill="#FFFFFF"
+              />
+
+              <!-- Rocket Nose -->
+              <path
+                class="rocket-nose"
+                d="M100 60 C80 100 83 120 83 120 L117 120 C117 120 120 100 100 60 Z"
+                fill="#10B981"
+              />
+
+              <!-- Window -->
+              <circle
+                cx="100"
+                cy="150"
+                r="16"
+                fill="#0B1220"
+                stroke="#94A3B8"
+                stroke-width="4"
+              />
+              <circle cx="104" cy="146" r="4" fill="#FFFFFF" />
+
+              <!-- Center Fin -->
+              <path
+                class="rocket-fin-center"
+                d="M95 240 L100 290 L105 240 Z"
+                fill="#1D4ED8"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Countdown Section -->
+    <section class="countdown-section" id="countdown">
+      <div class="container text-center animate-on-scroll">
+        <h2 class="section-title">Temps restant avant le décollage</h2>
+        <div class="countdown-wrapper" id="timer">
+          <div class="countdown-item">
+            <span class="countdown-value" id="days">00</span>
+            <span class="countdown-label">Jours</span>
+          </div>
+          <div class="countdown-item">
+            <span class="countdown-value" id="hours">00</span>
+            <span class="countdown-label">Heures</span>
+          </div>
+          <div class="countdown-item">
+            <span class="countdown-value" id="minutes">00</span>
+            <span class="countdown-label">Minutes</span>
+          </div>
+          <div class="countdown-item">
+            <span class="countdown-value" id="seconds">00</span>
+            <span class="countdown-label">Secondes</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About & Contact Section -->
+    <section class="contact-section" id="about">
+      <div class="container animate-on-scroll">
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h2 class="section-title">Préparons le terrain</h2>
+            <p class="mb-lg">
+              Jolof Nexus construit des applications web, gère vos
+              infrastructures et booste votre visibilité en ligne (SEO).
+            </p>
+            <p class="mb-lg">
+              Pendant que nous finalisons notre site, n'hésitez pas à nous
+              écrire pour toute demande de projet ou de collaboration.
+            </p>
+            <div class="contact-methods">
+              <a href="mailto:camarameth@gmail.com" class="contact-link">
+                <span class="icon">✉️</span> Email
+              </a>
+              <a
+                href="https://wa.me/221788646615"
+                class="contact-link"
+                target="_blank"
+              >
+                <span class="icon">💬</span> Discuter sur WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-form-card">
+            <h3 class="form-title">Envoyez-nous un message</h3>
+            <form
+              id="contactForm"
+              class="contact-form"
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+              action="/"
+            >
+              <input type="hidden" name="form-name" value="contact" />
+              <div style="display: none">
+                <label
+                  >Ne pas remplir si vous êtes humain
+                  <input name="bot-field" />
+                </label>
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  placeholder="Votre nom"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="Votre e-mail"
+                />
+              </div>
+              <div class="form-group">
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  required
+                  placeholder="Votre message"
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">
+                Envoyer
+              </button>
+              <div id="formStatus" class="form-status"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-content">
+        <div class="footer-logo">
+          <span class="logo-icon">▲</span> Jolof<span class="logo-accent"
+            >Nexus</span
+          >
+        </div>
+        <div class="copyright">
+          &copy; <span id="currentYear"></span> Jolof Nexus. Tous droits
+          réservés.
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
