@@ -1,4 +1,40 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // 0. Netlify Form Submission
+  const contactForm = document.getElementById("contactForm");
+  const formStatus = document.getElementById("formStatus");
+
+  if (contactForm) {
+    contactForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(contactForm);
+      const data = new URLSearchParams(formData);
+
+      formStatus.textContent = "Envoi en cours...";
+      formStatus.className = "form-status";
+
+      try {
+        const response = await fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: data.toString(),
+        });
+
+        if (response.ok) {
+          formStatus.textContent = "Message envoyé avec succès !";
+          formStatus.className = "form-status success";
+          contactForm.reset();
+        } else {
+          formStatus.textContent = "Erreur lors de l'envoi. Veuillez réessayer.";
+          formStatus.className = "form-status error";
+        }
+      } catch {
+        formStatus.textContent = "Erreur réseau. Veuillez réessayer.";
+        formStatus.className = "form-status error";
+      }
+    });
+  }
+
   // 1. Set current year in footer
   document.getElementById("currentYear").textContent = new Date().getFullYear();
 
