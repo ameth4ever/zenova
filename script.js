@@ -7,17 +7,14 @@ document.addEventListener("DOMContentLoaded", () => {
     contactForm.addEventListener("submit", async (e) => {
       e.preventDefault();
 
-      const formData = new FormData(contactForm);
-      const data = new URLSearchParams(formData);
-
       formStatus.textContent = "Envoi en cours...";
       formStatus.className = "form-status";
 
       try {
+        const formData = new FormData(contactForm);
         const response = await fetch("/", {
           method: "POST",
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: data.toString(),
+          body: new URLSearchParams(formData),
         });
 
         if (response.ok) {
@@ -25,12 +22,15 @@ document.addEventListener("DOMContentLoaded", () => {
           formStatus.className = "form-status success";
           contactForm.reset();
         } else {
+          const text = await response.text().catch(() => "");
           formStatus.textContent = "Erreur lors de l'envoi. Veuillez réessayer.";
           formStatus.className = "form-status error";
+          console.error("Netlify form error:", response.status, text);
         }
-      } catch {
+      } catch (err) {
         formStatus.textContent = "Erreur réseau. Veuillez réessayer.";
         formStatus.className = "form-status error";
+        console.error("Netlify form network error:", err);
       }
     });
   }
